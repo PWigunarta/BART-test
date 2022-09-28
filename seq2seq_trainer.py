@@ -38,7 +38,6 @@ from transformers.trainer_utils import (
     EvaluationStrategy,
     HPSearchBackend,
     PredictionOutput,
-    TrainerState,
     TrainOutput,
     default_compute_objective,
     default_hp_space,
@@ -48,6 +47,10 @@ from transformers.trainer_utils import (
     nested_numpify,
     nested_xla_mesh_reduce,
     set_seed,
+)
+
+from transformers.trainer_callback import (
+    TrainerState,
 )
 
 from transformers.integrations import (
