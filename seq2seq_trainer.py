@@ -61,10 +61,12 @@ from transformers.integrations import (
     run_hp_search_ray,
 )
 
-try:
-    from transformers.utils import label_smoothed_nll_loss
-except ImportError:
-    from utils import label_smoothed_nll_loss
+from fairseq.criterions.label_smoothed_cross_entropy import label_smoothed_nll_loss
+
+# try:
+#     from transformers.utils import label_smoothed_nll_loss
+# except ImportError:
+#     from utils import label_smoothed_nll_loss
 
 _use_native_amp = False
 _use_apex = False
