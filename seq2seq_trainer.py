@@ -26,15 +26,9 @@ from transformers.file_utils import WEIGHTS_NAME, is_datasets_available, is_torc
 from transformers.optimization import Adafactor, AdamW, get_linear_schedule_with_warmup
 
 from transformers.trainer_utils import (
-    PREFIX_CHECKPOINT_DIR,
-    BestRun,
     EvalPrediction,
-    EvaluationStrategy,
-    HPSearchBackend,
     PredictionOutput,
     TrainOutput,
-    default_compute_objective,
-    default_hp_space,
     set_seed,
 )
 
@@ -51,22 +45,14 @@ from transformers.trainer_callback import (
 )
 
 from transformers.integrations import (
-    default_hp_search_backend,
     is_comet_available,
     is_optuna_available,
     is_ray_available,
     is_tensorboard_available,
     is_wandb_available,
-    run_hp_search_optuna,
-    run_hp_search_ray,
 )
 
-from fairseq.criterions.label_smoothed_cross_entropy import label_smoothed_nll_loss
-
-# try:
-#     from transformers.utils import label_smoothed_nll_loss
-# except ImportError:
-#     from utils import label_smoothed_nll_loss
+from utils import label_smoothed_nll_loss
 
 _use_native_amp = False
 _use_apex = False
