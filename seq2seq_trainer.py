@@ -15,14 +15,13 @@ import numpy as np
 import torch
 from packaging import version
 from torch import nn
-from transformers import Trainer
+from transformers import Trainer, FSMTConfig
 from torch.utils.data.dataloader import DataLoader
 from torch.utils.data.dataset import Dataset
 from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data.sampler import RandomSampler, Sampler, SequentialSampler
 from transformers.data.data_collator import DataCollator, DataCollatorWithPadding, default_data_collator
 
-from transformers.configuration_fsmt import FSMTConfig
 from transformers.file_utils import WEIGHTS_NAME, is_datasets_available, is_torch_tpu_available
 from transformers.optimization import Adafactor, AdamW, get_linear_schedule_with_warmup
 from transformers.modeling_auto import MODEL_FOR_QUESTION_ANSWERING_MAPPING
