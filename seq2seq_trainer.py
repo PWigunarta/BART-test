@@ -31,38 +31,11 @@ from transformers.tokenization_utils_base import PreTrainedTokenizerBase
 
 from transformers.training_args import TrainingArguments
 
-from transformers.trainer_utils import (
-    PREFIX_CHECKPOINT_DIR,
-    BestRun,
-    EvalPrediction,
-    EvaluationStrategy,
-    HPSearchBackend,
-    PredictionOutput,
-    TrainOutput,
-    default_compute_objective,
-    default_hp_space,
-    distributed_broadcast_scalars,
-    distributed_concat,
-    nested_concat,
-    nested_numpify,
-    nested_xla_mesh_reduce,
-    set_seed,
-)
+from transformers.trainer_utils import *
 
-from transformers.trainer_callback import (
-    TrainerState,
-)
+from transformers.trainer_callback import *
 
-from transformers.integrations import (
-    default_hp_search_backend,
-    is_comet_available,
-    is_optuna_available,
-    is_ray_available,
-    is_tensorboard_available,
-    is_wandb_available,
-    run_hp_search_optuna,
-    run_hp_search_ray,
-)
+from transformers.integrations import *
 
 try:
     from transformers.utils import label_smoothed_nll_loss
