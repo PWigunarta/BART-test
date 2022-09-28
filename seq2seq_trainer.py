@@ -41,12 +41,15 @@ from transformers.trainer_utils import (
     TrainOutput,
     default_compute_objective,
     default_hp_space,
+    set_seed,
+)
+
+from transformers.trainer_pt_utils import (
     distributed_broadcast_scalars,
     distributed_concat,
     nested_concat,
     nested_numpify,
     nested_xla_mesh_reduce,
-    set_seed,
 )
 
 from transformers.trainer_callback import (
