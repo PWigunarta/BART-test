@@ -20,6 +20,7 @@ from torch.utils.data.dataloader import DataLoader
 from torch.utils.data.dataset import Dataset
 from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data.sampler import RandomSampler, Sampler, SequentialSampler
+from transformers.utils import logging
 from transformers.data.data_collator import DataCollator, DataCollatorWithPadding, default_data_collator
 
 from transformers.configuration_fsmt import FSMTConfig
