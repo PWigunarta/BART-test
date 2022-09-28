@@ -15,7 +15,7 @@ import numpy as np
 import torch
 from packaging import version
 from torch import nn
-from transformers import Trainer, FSMTConfig
+from transformers import Trainer, FSMTConfig, PreTrainedModel
 from torch.utils.data.dataloader import DataLoader
 from torch.utils.data.dataset import Dataset
 from torch.utils.data.distributed import DistributedSampler
@@ -24,11 +24,6 @@ from transformers.data.data_collator import DataCollator, DataCollatorWithPaddin
 
 from transformers.file_utils import WEIGHTS_NAME, is_datasets_available, is_torch_tpu_available
 from transformers.optimization import Adafactor, AdamW, get_linear_schedule_with_warmup
-from transformers.modeling_auto import MODEL_FOR_QUESTION_ANSWERING_MAPPING
-from transformers.modeling_utils import PreTrainedModel
-from transformers.tokenization_utils_base import PreTrainedTokenizerBase
-
-from transformers.training_args import TrainingArguments
 
 from transformers.trainer_utils import (
     PREFIX_CHECKPOINT_DIR,
